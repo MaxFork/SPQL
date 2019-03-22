@@ -14,7 +14,7 @@
 | FreeBSD          | -                |
 | Windows          | -                |
 
-## Installation
+## Install
 
 [download](https://salifm.github.io/res/deb/spql_v0.9.0.deb) for 64-bit Linux
 
@@ -27,7 +27,7 @@ chmod +x install.sh
 sudo ./install.sh
 ```
 
-## Uninstallation
+## Uninstall
 ```bash
 chmod +x uninstall.sh
 sudo ./uninstall.sh
