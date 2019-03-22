@@ -79,10 +79,9 @@ function tokenizer(input) {
             current++;
             continue;
         }
-        let NUMBERS = /[+-]?([0-9]*[.])?[0-9]+/;
-        if (NUMBERS.test(char)) {
+        if (/[0-9]/.test(char)) {
             let value = '';
-            while (NUMBERS.test(char) && current < input.length) {
+            while (/[0-9\.]/.test(char) && current < input.length) {
                 value += char;
                 char = input[++current];
             }
