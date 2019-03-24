@@ -5,7 +5,7 @@ function tokenizer(input) {
         let char = input[current];
         if (char === "{") {
             tokens.push({
-                type: 'lb',
+                type: "lb",
                 value: "{"
             });
             current++;
@@ -13,7 +13,7 @@ function tokenizer(input) {
         }
         if (char === "(") {
             tokens.push({
-                type: 'ls',
+                type: "ls",
                 value: "("
             });
             current++;
@@ -21,7 +21,7 @@ function tokenizer(input) {
         }
         if (char === "[") {
             tokens.push({
-                type: 'la',
+                type: "la",
                 value: "["
             });
             current++;
@@ -29,7 +29,7 @@ function tokenizer(input) {
         }
         if (char === "}") {
             tokens.push({
-                type: 'rb',
+                type: "rb",
                 value: "}"
             });
             current++;
@@ -37,7 +37,7 @@ function tokenizer(input) {
         }
         if (char === ")") {
             tokens.push({
-                type: 'rs',
+                type: "rs",
                 value: ")"
             });
             current++;
@@ -45,7 +45,7 @@ function tokenizer(input) {
         }
         if (char === "]") {
             tokens.push({
-                type: 'ra',
+                type: "ra",
                 value: "]"
             });
             current++;
@@ -57,42 +57,42 @@ function tokenizer(input) {
         }
         if (char === ";") {
             tokens.push({
-                type: 'end',
-                value: ';'
+                type: "end",
+                value: ";"
             });
             current++;
             continue;
         }
         if (char === ".") {
             tokens.push({
-                type: 'fs',
-                value: '.'
+                type: "fs",
+                value: "."
             });
             current++;
             continue;
         }
         if (char === ",") {
             tokens.push({
-                type: 'rz',
-                value: ','
+                type: "rz",
+                value: ","
             });
             current++;
             continue;
         }
         if (/[0-9]/.test(char)) {
-            let value = '';
+            let value = "";
             while (/[0-9\.]/.test(char) && current < input.length) {
                 value += char;
                 char = input[++current];
             }
             tokens.push({
-                type: 'num',
+                type: "num",
                 value
             });
             continue;
         }
         if (char === '"') {
-            let value = '';
+            let value = "";
             char = input[++current];
             while (true) {
                 if (char === "\\") {
@@ -110,13 +110,13 @@ function tokenizer(input) {
             }
             char = input[++current];
             tokens.push({
-                type: 'str',
+                type: "str",
                 value
             });
             continue;
         }
         if (char === "'") {
-            let value = '';
+            let value = "";
             char = input[++current];
             while (true) {
                 if (char === "\\") {
@@ -134,13 +134,13 @@ function tokenizer(input) {
             }
             char = input[++current];
             tokens.push({
-                type: 'str',
+                type: "sts",
                 value
             });
             continue;
         }
-        if (char === '/') {
-            let value = '';
+        if (char === "/") {
+            let value = "";
             char = input[++current];
             while (true) {
                 if (char === "\\") {
@@ -150,7 +150,7 @@ function tokenizer(input) {
                     char = input[++current];
                     continue;
                 }
-                if (char === '/' || current >= input.length) {
+                if (char === "/" || current >= input.length) {
                     break;
                 }
                 value += char;
@@ -158,15 +158,15 @@ function tokenizer(input) {
             }
             char = input[++current];
             tokens.push({
-                type: 'rgx',
+                type: "rgx",
                 value
             });
             continue;
         }
-        if (char === '#') {
-            let value = '';
+        if (char === "#") {
+            let value = "";
             char = input[++current];
-            while (char !== '\n' && current < input.length) {
+            while (char !== "\n" && current < input.length) {
                 value += char;
                 char = input[++current];
             }
@@ -175,19 +175,23 @@ function tokenizer(input) {
         }
         let LETTERS = /[A-Za-z0-9\_\$]/i;
         if (LETTERS.test(char)) {
-            let value = '';
+            let value = "";
             while (LETTERS.test(char) && current < input.length) {
                 value += char;
                 char = input[++current];
             }
-            if (" if else for while do func switch class break continue case default return try catch ".indexOf(" " + value + " ") >= 0) {
+            if (
+                " if else for while do func switch class break continue case default return try catch ".indexOf(
+                    " " + value + " "
+                ) >= 0
+            ) {
                 tokens.push({
-                    type: 'key',
+                    type: "key",
                     value
                 });
             } else {
                 tokens.push({
-                    type: 'nm',
+                    type: "nm",
                     value
                 });
             }
@@ -195,18 +199,18 @@ function tokenizer(input) {
         }
         let PUNC = /[\+\-\*\/\\\=\%\&\|\!\?\:\<\>\~\`\@\^]/i;
         if (PUNC.test(char)) {
-            let value = '';
+            let value = "";
             while (PUNC.test(char) && current < input.length) {
                 value += char;
                 char = input[++current];
             }
             tokens.push({
-                type: 'pnc',
+                type: "pnc",
                 value
             });
             continue;
         }
-        throw new TypeError('Unexpected token: ' + char);
+        throw new TypeError("Unexpected token: " + char);
     }
     return tokens;
 }
