@@ -16,7 +16,7 @@
 
 ## Install
 
-[download](https://salifm.github.io/res/deb/spql_v0.9.0.deb) for 64-bit Linux.
+[download](https://salifm.github.io/res/deb/spql_v0.9.0.deb) for 64-bit Linux
 
 or
 
