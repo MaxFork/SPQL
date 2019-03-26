@@ -16,7 +16,7 @@
 
 ## Install
 
-[download](https://salifm.github.io/res/deb/spql_v0.9.0.deb) for 64-bit Linux
+[download](https://salifm.github.io/res/deb/spql_v0.9.0.deb) for 64-bit Linux.
 
 or
 
@@ -34,7 +34,7 @@ sudo ./uninstall.sh
 ```
 
 ## The Author
-The SPQL programming language was originally designed and developed by [Salif Mehmed](https://github.com/salifm/)
+The SPQL programming language was originally designed and developed by [Salif Mehmed](https://github.com/salifm/).
 
 ## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
