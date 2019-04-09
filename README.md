@@ -1,12 +1,15 @@
-# The SPQL programming language
+## The SPQL programming language
 
-## Introduction
+### Introduction
 
-## General information
+Currently it's has only **tokenizer**.
+
+### General information
 - Website: [spql-lang.github.io](https://spql-lang.github.io/)
 - Source code: [github.com/spql-lang/spql](https://github.com/spql-lang/spql/)
 
-## Supported platforms
+### Supported platforms
+
 | Platform         | Architecture     |
 |:----------------:|:----------------:|
 | Linux            | x86-64 (64-bit)  |
@@ -14,7 +17,7 @@
 | FreeBSD          | -                |
 | Windows          | -                |
 
-## Install
+### Install
 
 [download](https://salifm.github.io/res/deb/spql_v0.9.0.deb) for 64-bit Linux
 
@@ -33,8 +36,8 @@ chmod +x uninstall.sh
 sudo ./uninstall.sh
 ```
 
-## The Author
+### The Author
 The SPQL programming language was originally designed and developed by [Salif Mehmed](https://github.com/salifm/).
 
-## License
+### License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
