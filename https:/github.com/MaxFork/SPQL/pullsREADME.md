@@ -20,9 +20,9 @@ Currently it's has only **tokenizer**.
 
 For execute it, you will requires **NodeJs** (or javascript) in the system.
 
-### Install
+#### Install
 
-[Download](https://salifm.github.io/res/deb/spql_v0.9.0.deb) for 64-bit Linux
+[Download](https://salifm.github.io/res/deb/spql_v0.9.0.deb) for 64-bit Linux (debian base)
 
 or
 
@@ -33,17 +33,18 @@ chmod +x install.sh
 sudo ./install.sh
 ```
 
-## Uninstall
+#### Uninstall
 
 ```bash
 chmod +x uninstall.sh
 sudo ./uninstall.sh
 ```
 
-### The Author
-
-The SPQL programming language was originally designed and developed by [Salif Mehmed](https://github.com/salifm/).
-
 ### License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+
+#### The Author
+
+The SPQL programming language was originally designed and developed by [Salif Mehmed](https://github.com/salifm/).
