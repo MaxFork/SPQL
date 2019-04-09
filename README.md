@@ -44,7 +44,6 @@ sudo ./uninstall.sh
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-
 #### The Author
 
 The SPQL programming language was originally designed and developed by [Salif Mehmed](https://github.com/salifm/).
