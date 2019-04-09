@@ -18,6 +18,8 @@ Currently it's has only **tokenizer**.
 | FreeBSD          | -                |
 | Windows          | -                |
 
+For execute it, you will requires **NodeJs** (or javascript) in the system.
+
 ### Install
 
 [Download](https://salifm.github.io/res/deb/spql_v0.9.0.deb) for 64-bit Linux
