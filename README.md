@@ -2,6 +2,8 @@
 
 ## Introduction
 
+Currently it's has only tokenizer.
+
 ## General information
 - Website: [spql-lang.github.io](https://spql-lang.github.io/)
 - Source code: [github.com/spql-lang/spql](https://github.com/spql-lang/spql/)
@@ -32,9 +34,6 @@ sudo ./install.sh
 chmod +x uninstall.sh
 sudo ./uninstall.sh
 ```
-
-## The Author
-The SPQL programming language was originally designed and developed by [Salif Mehmed](https://github.com/salifm/).
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
